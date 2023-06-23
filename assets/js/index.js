@@ -110,8 +110,8 @@ geojsonLayer.eachLayer(function (layer) {
             offset: [0, 30],
         });
 
-        const element = document.querySelector('.southlake');
-        element.style.color = layer.feature.properties.fcolor;
+        // const element = document.querySelector('.southlake');
+        // element.style.color = layer.feature.properties.fcolor;
 
     }else if(layer.feature.properties.info=='Belltown'){
         layer.bindTooltip('<span class="Belltown">' + layer.feature.properties.info + '</span>', {
@@ -121,8 +121,8 @@ geojsonLayer.eachLayer(function (layer) {
             className: 'label-tooltip',
         });
 
-        const element = document.querySelector('.Belltown');
-        element.style.color = layer.feature.properties.fcolor;
+        // const element = document.querySelector('.Belltown');
+        // element.style.color = layer.feature.properties.fcolor;
 
     }else if(layer.feature.properties.info=='Pike Place Market'){
         layer.bindTooltip('<span class="pikePlace">' + layer.feature.properties.info + '</span>', {
@@ -133,8 +133,8 @@ geojsonLayer.eachLayer(function (layer) {
             offset: [-70, 0]
         });
 
-        const element = document.querySelector('.pikePlace');
-        element.style.color = layer.feature.properties.fcolor;
+        // const element = document.querySelector('.pikePlace');
+        // element.style.color = layer.feature.properties.fcolor;
 
     }else if(layer.feature.properties.info=='Downtown'){
         layer.bindTooltip('<span class="Downtown">' + layer.feature.properties.info + '</span>', {
@@ -145,8 +145,8 @@ geojsonLayer.eachLayer(function (layer) {
             offset: [50, 0]
         });
 
-        const element = document.querySelector('.Downtown');
-        element.style.color = layer.feature.properties.fcolor;
+        // const element = document.querySelector('.Downtown');
+        // element.style.color = layer.feature.properties.fcolor;
 
     }else if(layer.feature.properties.info=='Financial District'){
         layer.bindTooltip('<span class="Financial">' + layer.feature.properties.info + '</span>', {
@@ -157,8 +157,8 @@ geojsonLayer.eachLayer(function (layer) {
             offset: [-50, 30]
         });
 
-        const element = document.querySelector('.Financial');
-        element.style.color = layer.feature.properties.fcolor;
+        // const element = document.querySelector('.Financial');
+        // element.style.color = layer.feature.properties.fcolor;
 
     }else{
         layer.bindTooltip('<span class="firstHill">' + layer.feature.properties.info + '</span>', {
@@ -168,8 +168,8 @@ geojsonLayer.eachLayer(function (layer) {
             className: 'label-tooltip',
         });
 
-        const element = document.querySelector('.firstHill');
-        element.style.color = layer.feature.properties.fcolor;
+        // const element = document.querySelector('.firstHill');
+        // element.style.color = layer.feature.properties.fcolor;
     }
 
     layer.on({
