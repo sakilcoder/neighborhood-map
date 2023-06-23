@@ -1,5 +1,5 @@
 var map = L.map('map', {
-    zoomSnap: 0.01,
+    zoomSnap: 0.1,
     zoomControl: false
 }).setView([0, 0], 13);
 map.scrollWheelZoom.disable();
@@ -23,9 +23,11 @@ var geojsonLayer = L.geoJSON(bm, {
 }).addTo(map);
 
 var highlightStyle = {
-    weight: 0,
+    weight: 2,
     fillColor: '#dadce1',
     fillOpacity: 0.8,
+    opacity: 0.8,
+    color: '#989a9d'
 };
 
 function highlightFeature(e) {
@@ -53,6 +55,7 @@ function highlightFeature(e) {
     }
 
     var bounds = layer.getBounds();
+    
     map.fitBounds(bounds, { animate: true });
     
 }
@@ -62,7 +65,8 @@ function resetHighlight(e) {
     layer.setStyle({
         weight: 0,
         fillOpacity: 1,
-        fillColor: e.target.feature.properties.color
+        fillColor: e.target.feature.properties.color,
+        opacity: 1,
     });
 
     if(e.target.feature.properties.info=='South Lake Union'){
