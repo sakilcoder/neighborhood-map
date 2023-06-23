@@ -35,28 +35,31 @@ body {
     /* border: 1px solid black; */
 }
 
-.leaflet-tooltip{
+.leaflet-tooltip {
     background-color: rgba(255, 255, 255, 0) !important;
     border: none !important;
     box-shadow: none !important;
-    
-}
-.region-label-tooltip{
-    font-size: 14px;
-    font-weight: bold;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-     margin-top: 28px;
-    margin-left: -10px;
-}
-.county-label-tooltip{
-    font-size: 10px;
+
 }
 
-.leaflet-control-attribution{
+.label-tooltip {
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+.bold-tooltip {
+    font-weight: normal;
+}
+
+.bold-tooltip:hover {
+    font-weight: bold;
+}
+
+.leaflet-control-attribution {
     display: none !important;
 }
 
-.popupCustom{
+.popupCustom {
     border: none;
     font-size: 10px;
 }
