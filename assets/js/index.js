@@ -24,7 +24,7 @@ var geojsonLayer = L.geoJSON(bm, {
 
 var highlightStyle = {
     weight: 0,
-    color: '#72757e',
+    fillColor: '#dadce1',
     fillOpacity: 0.8,
 };
 
@@ -61,7 +61,8 @@ function resetHighlight(e) {
     var layer = e.target;
     layer.setStyle({
         weight: 0,
-        fillOpacity: 1
+        fillOpacity: 1,
+        fillColor: e.target.feature.properties.color
     });
 
     if(e.target.feature.properties.info=='South Lake Union'){
